@@ -1,11 +1,11 @@
 dubbo:
     application:
-        name: shop-user
-        qos-port: 21002
-    protocol:
-        port: 20892
+        name: shop-comment
+        qos-port: 20998
     provider:
         token: true
+    protocol:
+        port: 20888
     registry:
         address: nacos://${nacos.address:localhost}:8848?username=nacos&password=nacos
     config-center:
@@ -24,7 +24,11 @@ dubbo:
                 endpoint: http://localhost:4317
                 timeout: 10s # default is 10s
                 compression-method: none # none/gzip The method used to compress payloads, default is "none"
-                headers: # customized added headers, default is empty
-                    auth:
+
+logging:
+    level:
+        root: info
+    pattern:
+        console: '[%d{dd/MM/yy HH:mm:ss:SSS z}] %t %5p %c{2} [%X{traceId:-}, %X{spanId:-}]: %m%n'
 server:
-    port: 35005
+    port: 35011

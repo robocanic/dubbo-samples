@@ -26,3 +26,5 @@ dubbo:
                 compression-method: none # none/gzip The method used to compress payloads, default is "none"
                 headers: # customized added headers, default is empty
                     auth:
+server:
+    port: 35007

@@ -30,3 +30,5 @@ logging:
         root: info
     pattern:
         console: '[%d{dd/MM/yy HH:mm:ss:SSS z}] %t %5p %c{2} [%X{traceId:-}, %X{spanId:-}]: %m%n'
+server:
+    port: 35008
