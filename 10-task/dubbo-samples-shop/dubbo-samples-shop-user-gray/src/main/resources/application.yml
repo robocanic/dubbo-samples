@@ -1,0 +1,28 @@
+dubbo:
+    application:
+        name: shop-user
+        qos-port: 21002
+    protocol:
+        port: 20892
+    provider:
+        token: true
+    registry:
+        address: nacos://${nacos.address:localhost}:8848?username=nacos&password=nacos
+    config-center:
+        address: nacos://${nacos.address:localhost}:8848?username=nacos&password=nacos
+    metadata-report:
+        address: nacos://${nacos.address:localhost}:8848?username=nacos&password=nacos
+        port: 8848
+    tracing:
+        enabled: true # default is false
+        sampling:
+            probability: 0.5 # sampling rate, default is 0.1
+        propagation:
+            type: W3C # W3C/B3 default is W3C
+        tracing-exporter:
+            otlp-config:
+                endpoint: http://localhost:4317
+                timeout: 10s # default is 10s
+                compression-method: none # none/gzip The method used to compress payloads, default is "none"
+                headers: # customized added headers, default is empty
+                    auth:

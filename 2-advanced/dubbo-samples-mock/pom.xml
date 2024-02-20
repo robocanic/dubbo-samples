@@ -41,6 +41,7 @@
 
         <junit5.version>5.10.1</junit5.version>
         <junit.platform>1.9.3</junit.platform>
+
     </properties>
 
 

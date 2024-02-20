@@ -24,7 +24,22 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>dubbo-samples-seata-account</artifactId>
-    <name>dubbo-samples-seata-account</name>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <name>Dubbo Seata Samples - Account</name>
+    <description>Dubbo Seata Samples - Account</description>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <dubbo.version>3.2.11</dubbo.version>
+        <nacos.version>2.2.0</nacos.version>
+        <seata.version>1.6.1</seata.version>
+        <druid.version>1.2.15</druid.version>
+    </properties>
+
 
     <dependencies>
         <dependency>

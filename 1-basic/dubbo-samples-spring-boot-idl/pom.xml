@@ -42,6 +42,7 @@
 
         <dubbo.version>3.3.0-beta.1</dubbo.version>
         <spring-boot.version>3.2.3</spring-boot.version>
+
         <protobuf-java.version>3.19.6</protobuf-java.version>
         <protoc.version>3.22.3</protoc.version>
     </properties>

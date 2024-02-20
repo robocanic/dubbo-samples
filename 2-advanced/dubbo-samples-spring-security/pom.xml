@@ -35,7 +35,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <log4j2.version>2.20.0</log4j2.version>
 
-        <dubbo.version>3.2.6</dubbo.version>
+        <dubbo.version>3.2.11</dubbo.version>
         <spring.version>4.3.30.RELEASE</spring.version>
         <spring-boot.version>2.7.8</spring-boot.version>
 

@@ -26,11 +26,17 @@ public class TracingConfigProvider {
 
     public static TracingConfig getTracingConfig() {
         TracingConfig tracingConfig = new TracingConfig();
+        SamplingConfig samplingConfig = new SamplingConfig();
+        samplingConfig.setProbability(1.0f);
+        PropagationConfig propagationConfig = new PropagationConfig();
+        propagationConfig.setType("W3C");
+        ExporterConfig.ZipkinConfig zipkinConfig = new ExporterConfig.ZipkinConfig();
+        zipkinConfig.setEndpoint("http://localhost:9411/api/v2/spans");
         tracingConfig.setEnabled(true);
-        tracingConfig.setSampling(new SamplingConfig(1.0f));
-        tracingConfig.setPropagation(new PropagationConfig("W3C"));
+        tracingConfig.setSampling(samplingConfig);
+        tracingConfig.setPropagation(propagationConfig);
         ExporterConfig exporterConfig = new ExporterConfig();
-        exporterConfig.setZipkinConfig(new ExporterConfig.ZipkinConfig("http://localhost:9411/api/v2/spans"));
+        exporterConfig.setZipkinConfig(zipkinConfig);
         tracingConfig.setTracingExporter(exporterConfig);
         return tracingConfig;
     }
