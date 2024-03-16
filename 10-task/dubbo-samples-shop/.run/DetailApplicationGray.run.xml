@@ -1,5 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="DetailApplicationGray" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="tasks-shop">
+    <option name="ALTERNATIVE_JRE_PATH" value="17" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <module name="dubbo-samples-shop-detail-gray" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="org.apache.dubbo.samples.detail.DetailApplicationGray" />
     <option name="VM_PARAMETERS" value="-Ddubbo.labels=&quot;env=gray&quot;" />

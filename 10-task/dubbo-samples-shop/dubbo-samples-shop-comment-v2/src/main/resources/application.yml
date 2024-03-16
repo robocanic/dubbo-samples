@@ -13,6 +13,16 @@ dubbo:
     metadata-report:
         address: nacos://${nacos.address:localhost}:8848?username=nacos&password=nacos
         port: 8848
+    metrics:
+        aggregation:
+            enabled: true
+        histogram:
+            enabled: true
+            enabled-percentiles: true
+        enable-jvm: true
+        enable-threadpool: true
+        enable-registry: true
+        enable-metadata: true
     tracing:
         enabled: true # default is false
         sampling:
@@ -30,5 +40,5 @@ logging:
         root: info
     pattern:
         console: '[%d{dd/MM/yy HH:mm:ss:SSS z}] %t %5p %c{2} [%X{traceId:-}, %X{spanId:-}]: %m%n'
-server:
-    port: 35011
+nacos:
+    address: 59.110.66.219

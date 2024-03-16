@@ -1,5 +1,3 @@
-server:
-    port: 35001
 dubbo:
     application:
         name: shop-detail
@@ -9,12 +7,23 @@ dubbo:
     protocol:
         port: 20890
     registry:
+#        address: zookeeper://127.0.0.1:2181
         address: nacos://${nacos.address:localhost}:8848?username=nacos&password=nacos
     config-center:
         address: nacos://${nacos.address:localhost}:8848?username=nacos&password=nacos
     metadata-report:
         address: nacos://${nacos.address:localhost}:8848?username=nacos&password=nacos
         port: 8848
+    metrics:
+        aggregation:
+            enabled: true
+        histogram:
+            enabled: true
+            enabled-percentiles: true
+        enable-jvm: true
+        enable-threadpool: true
+        enable-registry: true
+        enable-metadata: true
     tracing:
         enabled: true # default is false
         sampling:
@@ -32,3 +41,5 @@ logging:
         root: info
     pattern:
         console: '[%d{dd/MM/yy HH:mm:ss:SSS z}] %t %5p %c{2} [%X{traceId:-}, %X{spanId:-}]: %m%n'
+nacos:
+    address: 59.110.66.219

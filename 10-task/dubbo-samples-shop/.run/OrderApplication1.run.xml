@@ -1,5 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="OrderApplication1" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="tasks-shop">
+    <option name="ALTERNATIVE_JRE_PATH" value="17" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <module name="dubbo-samples-shop-order-v1" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="org.apache.dubbo.samples.order.OrderApplicationV1" />
     <option name="VM_PARAMETERS" value="-Ddubbo.labels=&quot;orderVersion=v1&quot;" />

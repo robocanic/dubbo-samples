@@ -33,11 +33,11 @@
     <description>Dubbo Task - Shop - User</description>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <dubbo.version>3.2.11</dubbo.version>
+        <dubbo.version>3.2.7</dubbo.version>
         <nacos.version>2.2.0</nacos.version>
     </properties>
 
@@ -49,13 +49,23 @@
             <version>${project.version}</version>
         </dependency>
 
-        <!-- registry dependency -->
+<!--         registry dependency -->
         <dependency>
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>nacos-client</artifactId>
             <version>${nacos.version}</version>
         </dependency>
-
+<!--        <dependency>-->
+<!--            <groupId>org.apache.dubbo</groupId>-->
+<!--            <artifactId>dubbo-dependencies-zookeeper-curator5</artifactId>-->
+<!--            <type>pom</type>-->
+<!--            <version>${dubbo.version}</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-observability-starter</artifactId>
+            <version>${dubbo.version}</version>
+        </dependency>
         <!-- dubbo dependency-->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
@@ -74,10 +84,6 @@
             </exclusions>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -107,7 +113,7 @@
                 <version>3.2.1</version>
                 <configuration>
                     <to>
-                        <image>apache/dubbo-demo:dubbo-samples-shop-user_0.0.1</image>
+                        <image>registry.cn-hangzhou.aliyuncs.com/robocanic-public/shop-user:0.0.1</image>
                     </to>
                     <container>
                         <jvmFlags>
