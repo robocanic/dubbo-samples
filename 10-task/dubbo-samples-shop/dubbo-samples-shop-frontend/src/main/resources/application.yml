@@ -12,6 +12,8 @@ dubbo:
     application:
         name: shop-frontend
         qos-port: 20991
+        qos-accept-foreign-ip: true
+        qos-anonymous-allow-commands: metrics
     protocol:
         name: dubbo
         port: 20881
@@ -48,4 +50,4 @@ dubbo:
                 compression-method: none # none/gzip The method used to compress payloads, default is "none"
 
 nacos:
-  address: 59.110.66.219
+  address: 47.94.36.22
