@@ -2,6 +2,8 @@ dubbo:
     application:
         name: shop-user
         qos-port: 20994
+        qos-anonymous-allow-commands: metrics
+        qos-anonymous-access-permission-level: PROTECTED
     protocol:
         port: 20884
     provider:
@@ -38,4 +40,4 @@ dubbo:
                 headers: # customized added headers, default is empty
                     auth:
 nacos:
-    address: 59.110.66.219
+    address: 47.94.36.22

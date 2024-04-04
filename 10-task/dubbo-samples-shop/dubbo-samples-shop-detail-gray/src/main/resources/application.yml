@@ -35,10 +35,5 @@ dubbo:
                 timeout: 10s # default is 10s
                 compression-method: none # none/gzip The method used to compress payloads, default is "none"
 
-logging:
-    level:
-        root: info
-    pattern:
-        console: '[%d{dd/MM/yy HH:mm:ss:SSS z}] %t %5p %c{2} [%X{traceId:-}, %X{spanId:-}]: %m%n'
 nacos:
     address: 59.110.66.219
