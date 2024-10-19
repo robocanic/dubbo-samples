@@ -31,7 +31,7 @@ dubbo:
             type: W3C # W3C/B3 default is W3C
         tracing-exporter:
             otlp-config:
-                endpoint: http://localhost:4317
+                endpoint: http://120.27.9.186:4317
                 timeout: 10s # default is 10s
                 compression-method: none # none/gzip The method used to compress payloads, default is "none"
 
@@ -41,4 +41,4 @@ logging:
     pattern:
         console: '[%d{dd/MM/yy HH:mm:ss:SSS z}] %t %5p %c{2} [%X{traceId:-}, %X{spanId:-}]: %m%n'
 nacos:
-    address: 59.110.66.219
+    address: 47.104.241.242
