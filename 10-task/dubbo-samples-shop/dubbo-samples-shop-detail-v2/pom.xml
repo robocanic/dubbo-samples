@@ -33,11 +33,11 @@
     <description>Dubbo Task - Shop - Detail Version2</description>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <dubbo.version>3.2.11</dubbo.version>
+        <dubbo.version>3.2.16</dubbo.version>
         <nacos.version>2.2.0</nacos.version>
     </properties>
 
@@ -65,6 +65,13 @@
             <artifactId>dubbo-spring-boot-tracing-otel-otlp-starter</artifactId>
             <version>${dubbo.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-observability-starter</artifactId>
+            <version>${dubbo.version}</version>
+        </dependency>
+
         <!-- dubbo dependency-->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
@@ -81,11 +88,6 @@
                     <groupId>org.springframework.boot</groupId>
                 </exclusion>
             </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
@@ -116,7 +118,7 @@
                 <version>3.2.1</version>
                 <configuration>
                     <to>
-                        <image>registry.cn-hangzhou.aliyuncs.com/robocanic-public/shop-detail:v2_0.0.1</image>
+                        <image>apache/dubbo-demo:dubbo-samples-shop-detail_v2_0.0.2</image>
                     </to>
                     <container>
                         <jvmFlags>

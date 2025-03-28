@@ -21,6 +21,7 @@ ch<!--
         <artifactId>dubbo-samples-spring-boot</artifactId>
         <groupId>org.apache.dubbo</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -40,13 +41,19 @@ ch<!--
         </dependency>
         <dependency>
             <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-zookeeper-curator5-spring-boot-starter</artifactId>
+            <artifactId>dubbo-nacos-spring-boot-starter</artifactId>
         </dependency>
 
         <!-- spring starter -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>

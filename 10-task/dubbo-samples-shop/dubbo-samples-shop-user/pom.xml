@@ -37,7 +37,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <dubbo.version>3.2.7</dubbo.version>
+        <dubbo.version>3.2.16</dubbo.version>
         <nacos.version>2.2.0</nacos.version>
     </properties>
 
@@ -55,17 +55,19 @@
             <artifactId>nacos-client</artifactId>
             <version>${nacos.version}</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.apache.dubbo</groupId>-->
-<!--            <artifactId>dubbo-dependencies-zookeeper-curator5</artifactId>-->
-<!--            <type>pom</type>-->
-<!--            <version>${dubbo.version}</version>-->
-<!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-tracing-otel-otlp-starter</artifactId>
+            <version>${dubbo.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-spring-boot-observability-starter</artifactId>
             <version>${dubbo.version}</version>
         </dependency>
+
         <!-- dubbo dependency-->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
@@ -113,7 +115,7 @@
                 <version>3.2.1</version>
                 <configuration>
                     <to>
-                        <image>registry.cn-hangzhou.aliyuncs.com/robocanic-public/shop-user:0.0.1</image>
+                        <image>apache/dubbo-demo:dubbo-samples-shop-user_0.0.2</image>
                     </to>
                     <container>
                         <jvmFlags>

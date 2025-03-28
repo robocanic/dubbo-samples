@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-timeout: 300
+timeout: 600
 
 # global system props for all service
 systemProps:
@@ -29,7 +29,7 @@ services:
     image: mysql:5.7
     environment:
       - MYSQL_DATABASE=seata
-      - MYSQL_ROOT_PASSWORD=helloworld
+      - MYSQL_ROOT_PASSWORD=root
     volumes:
       - ${_basedir}/script/db:/docker-entrypoint-initdb.d
   seata-server:

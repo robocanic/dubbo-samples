@@ -37,7 +37,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <dubbo.version>3.2.7</dubbo.version>
+        <dubbo.version>3.2.16</dubbo.version>
         <nacos.version>2.2.0</nacos.version>
     </properties>
 
@@ -86,7 +86,6 @@
             </exclusions>
         </dependency>
 
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
@@ -115,7 +114,7 @@
                 <version>3.2.1</version>
                 <configuration>
                     <to>
-                        <image>registry.cn-hangzhou.aliyuncs.com/robocanic-public/shop-comment:v1_0.0.1</image>
+                        <image>apache/dubbo-demo:dubbo-samples-shop-comment_0.0.2</image>
                     </to>
                     <container>
                         <jvmFlags>
